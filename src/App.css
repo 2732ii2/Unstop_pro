@@ -1,38 +1,164 @@
 .App {
-  text-align: center;
+  background:#F7F8FA;
+  width: 100%;
+  height:100vh;
+  display: flex;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar{
+  width: 12%;
   display: flex;
   flex-direction: column;
+  height:100%;
+  /* justify-content: c; */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  background: white;
 
-.App-link {
-  color: #61dafb;
 }
+.asov{
+  height: 30%;
+}
+.maindiv{
+  width: 85%;
+  height:90%;
+}
+#h_2{
+  font-size: 1.3vw;
+}
+#div_{
+  font-size:1vw;
+}
+#p_{
+  font-size: .8vw;
+}
+#p_1{
+  font-size: .9vw;
+}
+.myas{
+  height: 40%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+}
+#share_{
+  width:4.4vw;
+  font-size: .8vw;
+}
+.samedivs{
+  width: 32%;
+  justify-content:center;
+  height: 90%;
+}
+#icons_{
+  width: 2.3vw;
+  height: 2.3vw;
+}
+#top_{
+  justify-content:space-between;
+}
+#comp{
+  display: none;
+}
+#mob{
+  display: block;
+}
+#myashead{
+  display: flex;
+}
+#assm{
+  border-bottom:1px solid rgb(221,229,234);
+}
+#assminside{
+  border-right:1px solid rgb(221,229,234);
+}
+#math{
+  display: flex;
+}
+#math_{
+  display: none;
+  border: none;
+}
+.myasinside{
+  justify-content:space-between;
+
+}
+@media (max-width:500px) {
+  #myashead{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  #assm{
+    border-bottom:none;
+  } 
+  #comp{
+    display: block;
+  }
+  #mob{
+    display: none;
+  }
+  .sidebar{
+    display: none;
+   
+  }
+  #math{
+    display: none;
+  }
+  #top_{
+    justify-content:end;
+    padding-right: 10px;
+  }
+  .asov{
+    height: 0%;
+    overflow: hidden;
+  }
+  .maindiv{
+    width: 100%;
+    height:100%;
+  }
+  .myasinside{
+    flex-direction: column;
+    overflow-y: scroll;
+    /* justify-content: center; */
+  }
+  .myas{
+    height: 90%;
+  }
+  .samedivs{
+    width: 90%;
+    min-height: 23%;
+    height: 23%;
+    justify-content: space-evenly;
+    margin-top: 20px;
+
+  }
+  #sp_sam{
+    min-height: 35%;
+  }
+  #math_{
+    display: flex;
+    border: none;
+    height: 100%;
+    margin-left: 10px;
+    /* ,height:"32%",borderBottom:"1px dashed rgb(217, 219, 222)" */
+  }
+  #icons_{
+    width: 7.3vw;
+    height: 7.3vw;
+  }
+  #h_2{
+    font-size: 5vw;
+  }
+  #div_{
+    font-size:3.3vw;
+  }
+  #p_1{
+    font-size: 3.4vw;
+  }
+  #p_,#share_{
+    font-size: 3vw;
+  }
+  #share_{
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+
   }
 }
