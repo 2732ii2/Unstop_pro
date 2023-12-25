@@ -1,14 +1,18 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import AddIcon from '@mui/icons-material/Add';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LinkIcon from '@mui/icons-material/Link';
+import SearchIcon from '@mui/icons-material/Search';
+import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import BarChartIcon from '@mui/icons-material/BarChart';
 import {useSelector,useDispatch} from "react-redux";
-import { add_off, add_on } from '../Redux/actions';
-export default function Myassessment() {
+import { add_off, add_on,shut_off,shut_on } from '../Redux/actions';
+export default function Myassessment(props) {
     var ref=useRef(null);
     var select=useSelector(state=>state.val);
+
     var dispatch=useDispatch();
     function eventCall(){
         if(select.includes("on")){
@@ -18,10 +22,29 @@ export default function Myassessment() {
             dispatch(add_on);
         }
     }
+    async function handler(){
+            console.log("hello");
+            if(props.value){
+                props.eventhandler(false);
+            }
+            else{
+                props.eventhandler(true);
+            }
+    }
+    useEffect(()=>{
+        handler();
+    },[])
     var list1=[0,[{number:1}],[{number:0,color:"rgb(151, 71, 255)"},{number:3,color:"rgb(47, 121, 224)"},{number:3,color:"rgb(217, 61, 113)"}]];
   return (
     <>
+        <div style={{width:"100%",height:"auto", display:"flex",justifyContent:"space-between",alignItems:"center"}}>
         <h2 style={{paddingTop:"10px",fontSize:"20px",paddingLeft:"30px",color:"#1C4980"}}>My Assessment</h2>
+        <div id='show_filters' style={{width:"30%",height:"100%",justifyContent:"space-evenly",alignItems:"center"}}>
+            <SearchIcon  />
+            <FilterAltIcon />
+            <BarChartIcon onClick={handler}  />
+        </div>  
+        </div>
         <div className='myasinside' style={{width:"95%",display:"flex",transition:"all .5s",marginLeft:"25px",height:"90%"}}>
             {
                 list1.map((e,i)=>{

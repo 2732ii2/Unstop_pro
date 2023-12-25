@@ -77,6 +77,14 @@
   display: none;
   border: none;
 }
+#clickbate{
+  width: 43%;
+  height: auto;
+  top: 50px;
+}
+#show_filters{
+  display: none;
+}
 .myasinside{
   justify-content:space-between;
 
@@ -85,9 +93,23 @@
   #myashead{
     display: none;
   }
+
+#show_filters{
+  display: flex;
+}
   #assm{
     border-bottom:none;
   } 
+  #assminside{
+    border:none;
+  }
+  #clickbate{
+    width: 350px;
+    height: auto;
+    /* top:50; */
+  top: 150px;
+    
+  }
   #comp{
     display: block;
   }
@@ -106,7 +128,7 @@
     padding-right: 10px;
   }
   .asov{
-    height: 0%;
+    /* height: 0%; */
     overflow: hidden;
   }
   .maindiv{

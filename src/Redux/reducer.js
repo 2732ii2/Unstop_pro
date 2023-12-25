@@ -13,6 +13,7 @@ const reducer=(state=initial_state,action)=>{
             ...state,val:"off"
         }
     }
+    
     else{
         return state
     }
